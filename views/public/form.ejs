@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- logo icon on title -->
+    <link rel="icon" href="/images/fav-icon.svg" type="image/svg" />
+    <title>Ker Active</title>
+  </head>
+
+  <body class="">
+    <header
+      style="
+        background: url(/images/thinker-giant.png);
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position:relative;
+        z-index: -2;
+      "
+      class=""
+    >
+      <section style="height: 100vh" class="">
+        <nav class="section">
+          <div class="d-flex align-items-center">
+            <img
+              onclick="location.href='/'"
+              src="/images/Brand-logo.svg"
+              alt=""
+              class="brand-logo"
+            />
+          </div>
+
+          <div class="nav-links" id="nav-links">
+            <ul class="navbar-links">
+              <li onclick="location.href='/'" class="">HOME</li>
+              <li onclick="location.href='/trainers'" class="">TRAINERS</li>
+              <li onclick="location.href='/contact'" class="">CONTACT</li>
+            </ul>
+          </div>
+        </nav>
+
+        <div style="padding-top: 15rem" class="hero-text col-md sub2">
+          <h1 class="pb-5">
+            WHERE <br />
+            GOALS MEET <br />
+            GUIDANCE
+          </h1>
+        </div>
+      </section>
+    </header>
+
+    <section
+      style="
+        background: url(/images/paper-edge.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      "
+      class="edge-rel"
+    >
+    <section class="pt-5 paper-effect2">
+      <!-- <img src="images/edge effect.png" alt="" class="w-100"> -->
+      <img src="/images/paper-edge2.png" alt="" class="w-100">
+    </section>
+    
+    <form action="/submit" class="" method="post" enctype="multipart/form-data">
+    
+      <div class="flex-wrap sub2">
+        <div class="row gap-5 align-items-end mt-5">
+
+
+          <div class="col-md">
+            
+            <div class="">
+              <h1 class="reason pb-5">SIGN UP</h1>
+              <div class="upload-container">
+              <div class="d-flex align-items-center">
+                  <div style="background: #aaa79e;" class="card p-1 ms-auto">
+                      <img src="images/upload-icon.svg" alt="" class="" />
+                  </div>
+                  <div style="background: #aaa79e;" class="card p-1 ms-2">
+                      <img src="images/Delete-icon.svg" alt="" class="" />
+                  </div>
+              </div>
+              
+
+              <div class="text-center my-5 py-5">
+                <label for="fileInput">
+                <input type="file" id="fileInput" name="image" style="display: none;" accept="image/*" onchange="previewImage()">
+                  <img id="imagePreview" src="images/image-icon.svg" alt="" class="image-preview pb-5" />
+
+                  <div class="d-flex align-items-center mb-5 pb-5">
+                      <img src="images/upload-icon.svg" alt="" class="ms-auto me-3" />
+                      <p class="me-auto cntact mb-0">Upload Image</p>
+                  </div>
+                  </label>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md">
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light mb-5"
+                placeholder="FULLNAME *"
+              />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light mb-5"
+                placeholder="EMAIL *"
+              />
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light mb-5"
+                placeholder="PHONE NUMBER *"
+              />
+              <input
+                type="text"
+                name="location"
+                id="location"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light mb-5"
+                placeholder="LOCATION *"
+              />
+              <input
+                type="text"
+                name="instagram"
+                id="instagram"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light mb-5"
+                placeholder="INSTAGRAM"
+              />
+              <input
+                type="text"
+                name="twitter"
+                id="twitter"
+                class="w-100 p-4 px-5 rounded-pill text-dark bg-light"
+                placeholder="TWITTER (X)"
+              />
+            
+          </div>
+        </div>
+      </div>
+      <div style="padding-bottom:10rem;" class="sub2">
+        <h1 class="all-trainers">SERVICES</h1>
+
+        <div  class="container">
+
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Excercise Psychologist" >
+            <span class="list">Excercise Psychologist</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Boxing Instructor" >
+            <span class="list">Boxing Instructor</span>
+          </label>
+        </div>
+       <div>
+        <label>
+          <input type="checkbox" name="services" value="Private Personal Training">
+          <span class="list">Private Personal Training</span>
+        </label>
+       </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Nutritionist" id="checkbox4">
+            <span class="list">Nutritionist</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Surfing Instructor" id="checkbox5">
+            <span class="list">Surfing Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Yoga Instructor" id="checkbox24">
+            <span class="list">Yoga Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Swimming Instructor" id="checkbox6">
+            <span class="list">Swimming Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Pilates Instructor" id="checkbox7">
+            <span class="list">Pilates Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Dietician" id="checkbox8">
+            <span class="list">Dietician</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Muay Thai Instructor" id="checkbox9">
+            <span class="list">Muay Thai Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Capoeira Instructor" id="checkbox10">
+            <span class="list">Capoeira Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Judo Instructor" id="checkbox11">
+            <span class="list">Judo Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Karate Instructor" id="checkbox12">
+            <span class="list">Karate Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Kickboxing Instructor" id="checkbox13">
+            <span class="list">Kickboxing Instructor</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Football" value="Football" id="checkbox14">
+            <span class="list">Football</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Basketball" id="checkbox15">
+            <span class="list">Basketball</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Tennis" value="Tennis" id="checkbox16">
+            <span class="list">Tennis</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Water Aerobics" id="checkbox17">
+            <span class="list">Water Aerobics</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Volleyball" id="checkbox18">
+            <span class="list">Volleyball</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Table Tennis" id="checkbox19">
+            <span class="list">Table Tennis</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Badminton" id="checkbox20">
+            <span class="list">Badminton</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Squash" id="checkbox21">
+            <span class="list">Squash</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Cycling" id="checkbox22">
+            <span class="list">Cycling</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="services" value="Others" id="checkbox23">
+            <span class="list">Others</span>
+          </label>
+        </div>
+        
+
+        </div>
+
+        <div class="text-center my-5 pt-5">
+          <button
+            style="padding-left: 15rem; padding-right: 15rem"
+            type="submit"
+            class="btn-custom-2 text-center mx-auto"
+          >
+            SUBMIT
+          </button>
+
+          <!--<p class="me-auto cntact pt-5">Already have an account? Log in</p>-->
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer style="background:#161717;"> 
+    <section style="padding-top: 10rem;" class="sub2">
+      <div class="text-center">
+        <p class="lets-talk pb-5">
+          lets talk
+        </p>
+
+        <img src="images/ker-active-footer-logo.svg" alt="" class="py-5 ker-active-logo">
+
+        <div class="">
+          <button onclick="location.href='signup.html'" class="btn-custom-1 my-5 mx-auto">
+            GET IN TOUCH <i class="fa-solid fa-arrow-right ms-3"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="flex-wrap py-5">
+        <div class="row align-items-start gap-5">
+          <div class="col-md text-start">
+            <img src="images/ker-active-mini.svg" alt="" class="pb-3">
+
+            <div class="d-flex align-items-center gap-5 socials pt-4">
+              <span>
+                <i class="fa-brands fa-instagram"></i>
+              </span>
+              INSTAGRAM
+            </div>
+            <div class="d-flex align-items-center gap-5 socials py-4">
+              <span>
+                <i class="fa-brands fa-twitter"></i>
+              </span>
+              Twitter
+            </div>
+          </div>
+          <div class="col-md text-start pages">
+            <h2 class="text-light pb-5">PAGES</h2>
+            <h4 class="pb-3"><a style="color: rgba(255, 255, 255, 0.60)" href="index.html" class="text-decoration-none">HOME</a></h4>
+            <h4 class="pb-3"><a style="color: rgba(255, 255, 255, 0.60)" href="trainers.html" class="text-decoration-none">TRAINERS</a></h4>
+            <h4 class="pb-3"><a style="color: rgba(255, 255, 255, 0.60)" href="contact.html" class="text-decoration-none">CONTACT</a></h4>
+            
+          </div>
+
+          <div class="subscribe col-md-4 text-start">
+            <h1 style="font-family: Anton;" class="text-light">SUBSCRIBE TO OUR NEWS LETTER</h1>
+            <div class="rounded-pill email" style="background: #008080">
+              <input
+                style="background: #008080"
+                type="text"
+                class="w-75 p-3 px-4 rounded-pill text-light"
+                placeholder="EMAIL"
+              />
+              <button
+                type="button"
+                style="background: #161717; color: white"
+                class="rounded-pill submitBtn"
+              >
+                SUBMIT
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_405_89)">
+                    <path
+                      d="M12.5 24.22C19.1274 24.22 24.5 18.8474 24.5 12.22C24.5 5.59255 19.1274 0.219971 12.5 0.219971C5.87258 0.219971 0.5 5.59255 0.5 12.22C0.5 18.8474 5.87258 24.22 12.5 24.22Z"
+                      fill="#EBE8E0"
+                    />
+                    <path
+                      d="M13.4332 14.128L9.36541 10.0602L9.26827 9.96347L9.13379 9.82862L9.26827 9.69376L9.36541 9.597L9.87703 9.08538L9.97379 8.98862L10.1086 8.85376L10.2435 8.98862L10.3403 9.08538L14.4081 13.1532V9.95509H15.7871V15.5075H10.2351V14.1284L13.4332 14.128Z"
+                      fill="#2D2C2A"
+                      stroke="#2D2C2A"
+                      stroke-width="0.569444"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_405_89">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0.5 0.219971)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class=" col-md">
+            
+              <div style="margin-top: 12rem;" class="socials d-flex align-items-center">
+                <h5 class="ms-auto mb-0"><a href="#" class="text-decoration-none text-light">TO Top</a></h5>
+              <span class="ms-4 ">
+                <a style="color: rgba(255, 255, 255, 0.60)" href="#" class="text-decoration-none"><i class="fa-solid fa-arrow-up"></i></a>
+              </span>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+    <!-- js link file -->
+    <script src="/js/script.js"></script>
+
+    <!-- bootstrap js cdn link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

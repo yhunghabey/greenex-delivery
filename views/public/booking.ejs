@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GreenEx Delivery - Transportation, Cargo & Logistics</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="LogiXpress - Transportation, Cargo & Logistics HTML Template"
+      name="description"
+    />
+    <meta content="" name="keywords" />
+    <meta content="" name="author" />
+    <!-- CSS Files
+    ================================================== -->
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="bootstrap"
+    />
+    <link href="css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link
+      id="colors"
+      href="css/colors/scheme-01.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .custom-file-upload {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .custom-file-upload input[type="file"] {
+        display: none;
+      }
+
+      .upload-label {
+        background: #ff6600;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .upload-label:hover {
+        background: #e65c00;
+        transform: translateY(-2px);
+      }
+
+      .upload-label i {
+        font-size: 20px;
+      }
+
+      .image-preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .image-preview img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        transition: transform 0.3s;
+      }
+
+      .image-preview img:hover {
+        transform: scale(1.05);
+        border-color: #ff6600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <a href="#" id="back-to-top"></a>
+
+      <!-- page preloader begin -->
+      <div id="de-loader"></div>
+      <!-- page preloader close -->
+
+      <!-- header begin -->
+      <header class="transparent">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="de-flex sm-pt10">
+                <div class="de-flex-col">
+                  <!-- logo begin -->
+                  <div id="logo">
+                    <a href="/">
+                      <img
+                        class="logo-main"
+                        src="images/logo-white-2.webp"
+                        alt=""
+                      />
+                      <img
+                        class="logo-scroll"
+                        src="images/logo-white-2.webp"
+                        alt=""
+                      />
+                      <img
+                        class="logo-mobile"
+                        src="images/logo-white-2.webp"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <!-- logo end -->
+                </div>
+                <div class="de-flex-col header-col-mid">
+                  <!-- mainemenu begin -->
+                  <ul id="mainmenu">
+                    <li><a class="menu-item" href="/">Home</a></li>
+                    <li>
+                      <a class="menu-item" href="/track">Tracking</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="/service">Services</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="/about-us">About Us</a>
+                    </li>
+                    <li>
+                      <a class="menu-item" href="#section-why-choose-us"
+                        >Why Choose Us</a
+                      >
+                    </li>
+                    <li><a class="menu-item" href="#section-faq">FAQ</a></li>
+                  </ul>
+                  <!-- mainmenu end -->
+                </div>
+                <div class="de-flex-col">
+                  <div class="menu_side_area">
+                    <a href="/booking" class="btn-main btn-line fx-slide"
+                      ><span>Book Shipment</span></a
+                    >
+                    <span id="menu-btn"></span>
+                  </div>
+
+                  <div id="btn-extra">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header close -->
+      <!-- content begin -->
+      <div class="no-bottom no-top" id="content">
+        <div id="top"></div>
+
+        <section
+          id="subheader"
+          class="text-light sm-mt-90 relative rounded-1 overflow-hidden m-3"
+          data-bgimage="url(images/background/4.webp) center"
+        >
+          <div class="container relative z-2">
+            <div class="row gy-4 gx-5 align-items-center">
+              <div class="col-lg-12">
+                <h1 class="split">Book Shipment</h1>
+                <ul class="crumb wow fadeInUp">
+                  <li><a href="/">Home</a></li>
+                  <li class="active">Book Shipment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-edge-bottom color op-7 h-80"></div>
+          <div class="sw-overlay op-7"></div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-8">
+                <% if (typeof message !== "undefined") { %>
+                <div
+                  class="alert <%= success ? 'alert-success' : 'alert-danger' %>"
+                  style="padding: 15px; margin-bottom: 20px; border-radius: 5px"
+                >
+                  <%= message %>
+                </div>
+                <% } %>
+
+                <form
+                  name="logisticsBookingForm"
+                  id="logistics_booking_form"
+                  class="position-relative z1000"
+                  method="post"
+                  enctype="multipart/form-data"
+                  action="/submit"
+                >
+                  <div class="row g-4 gy-2">
+                    <!-- Shipper Information -->
+                    <div class="col-md-12">
+                      <h3>Shipper Information</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                      <h5>Full Name / Company</h5>
+                      <input
+                        type="text"
+                        name="shippersName"
+                        id="shipper_name"
+                        class="form-control"
+                        placeholder="Shipper Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Email</h5>
+                      <input
+                        type="email"
+                        name="shippersEmail"
+                        id="shipper_email"
+                        class="form-control"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Phone</h5>
+                      <input
+                        type="text"
+                        name="shippersPhoneNo"
+                        id="shipper_phone"
+                        class="form-control"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Address</h5>
+                      <input
+                        type="text"
+                        name="shippersAddress"
+                        id="shipper_address"
+                        class="form-control"
+                        placeholder="Shipper Address"
+                      />
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <!-- Receiver Information -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Receiver Information</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                      <h5>Full Name / Company</h5>
+                      <input
+                        type="text"
+                        name="receiversName"
+                        id="receiver_name"
+                        class="form-control"
+                        placeholder="Receiver Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Email</h5>
+                      <input
+                        type="email"
+                        name="receiversEmail"
+                        id="receiver_email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Phone</h5>
+                      <input
+                        type="text"
+                        name="receiversPhoneNo"
+                        id="receiver_phone"
+                        class="form-control"
+                        placeholder="Phone"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Delivery Address</h5>
+                      <input
+                        type="text"
+                        name="deliveryAddress"
+                        id="receiver_address"
+                        class="form-control"
+                        placeholder="Delivery Address"
+                      />
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <!-- Shipment Details -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Shipment Details</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                      <h5>Type of Goods</h5>
+                      <input
+                        type="text"
+                        name="typeOfGoods"
+                        id="goods_type"
+                        class="form-control"
+                        placeholder="e.g. Electronics, Furniture"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Package Type</h5>
+                      <select
+                        name="packageType"
+                        id="package_type"
+                        class="form-control"
+                      >
+                        <option value="Box">Box</option>
+                        <option value="Pallet">Pallet</option>
+                        <option value="Container">Container</option>
+                        <option value="Loose Cargo">Loose Cargo</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <h5>Number of Packages</h5>
+                      <input
+                        type="number"
+                        name="noOfPackages"
+                        id="packages"
+                        class="form-control"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <h5>Weight (kg)</h5>
+                      <input
+                        type="text"
+                        name="weight"
+                        id="weight"
+                        class="form-control"
+                        placeholder="Weight"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <h5>Dimensions (L×W×H cm)</h5>
+                      <input
+                        type="text"
+                        name="dimension"
+                        id="dimensions"
+                        class="form-control"
+                        placeholder="100×50×50"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Value of Goods (USD)</h5>
+                      <input
+                        type="text"
+                        name="valueOfGoods"
+                        id="goods_value"
+                        class="form-control"
+                        placeholder="e.g. 5000"
+                      />
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <!-- Logistics Options -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Logistics Options</h3>
+                    </div>
+
+                    <div class="col-md-6">
+                      <h5>Mode of Transport</h5>
+                      <select
+                        name="modeOfTransport"
+                        id="transport_mode"
+                        class="form-control"
+                      >
+                        <option value="Truck">Truck</option>
+                        <option value="Air">Air</option>
+                        <option value="Sea">Sea</option>
+                        <option value="Rail">Rail</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Incoterms</h5>
+                      <select
+                        name="incoterms"
+                        id="incoterms"
+                        class="form-control"
+                      >
+                        <option value="EXW">EXW</option>
+                        <option value="FOB">FOB</option>
+                        <option value="CIF">CIF</option>
+                        <option value="DAP">DAP</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Delivery Speed</h5>
+                      <select
+                        name="deliverySpeed"
+                        id="delivery_speed"
+                        class="form-control"
+                      >
+                        <option value="Standard">Standard</option>
+                        <option value="Express">Express</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Insurance</h5>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="insurance_yes"
+                          name="insurance"
+                          value="Yes"
+                          checked
+                        />
+                        <label class="form-check-label" for="insurance_yes"
+                          >Yes</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          id="insurance_no"
+                          name="insurance"
+                          value="No"
+                        />
+                        <label class="form-check-label" for="insurance_no"
+                          >No</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <h5>Special Handling</h5>
+                      <div class="d-flex flex-wrap gap-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="fragile"
+                            name="specialHandling[]"
+                            value="Fragile"
+                          />
+                          <label class="form-check-label" for="fragile"
+                            >Fragile</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="perishable"
+                            name="specialHandling[]"
+                            value="Perishable"
+                          />
+                          <label class="form-check-label" for="perishable"
+                            >Perishable</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="hazardous"
+                            name="specialHandling[]"
+                            value="Hazardous"
+                          />
+                          <label class="form-check-label" for="hazardous"
+                            >Hazardous</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="oversized"
+                            name="specialHandling[]"
+                            value="Oversized"
+                          />
+                          <label class="form-check-label" for="oversized"
+                            >Oversized</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <!-- Schedule -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Schedule</h3>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Pickup Date</h5>
+                      <input
+                        type="date"
+                        name="pickupDate"
+                        id="pickup_date"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Pickup Time</h5>
+                      <input
+                        type="time"
+                        name="pickupTime"
+                        id="pickup_time"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Delivery Deadline</h5>
+                      <input
+                        type="date"
+                        name="deliveryDeadline"
+                        id="delivery_deadline"
+                        class="form-control"
+                      />
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Upload Shipment Images</h3>
+                      <div class="custom-file-upload">
+                        <label for="shipment_images" class="upload-label">
+                          <i class="fa fa-cloud-upload"></i> Choose Images
+                        </label>
+                        <input
+                          type="file"
+                          id="shipment_images"
+                          name="image"
+                          accept="image/*"
+                          multiple
+                          onchange="previewImages(event)"
+                        />
+                      </div>
+
+                      <!-- Image Preview Area -->
+                      <div id="imagePreview" class="image-preview mt-3"></div>
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <!-- Payment -->
+                    <div class="col-md-12 mt-3">
+                      <h3>Payment</h3>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Payment Method</h5>
+                      <select
+                        name="paymentMethod"
+                        id="payment_method"
+                        class="form-control"
+                      >
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Cash On Delivery">
+                          Cash On Delivery
+                        </option>
+                        <option value="Corporate Account">
+                          Corporate Account
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <h5>Billing Address</h5>
+                      <input
+                        type="text"
+                        name="billingAddress"
+                        id="billing_address"
+                        class="form-control"
+                        placeholder="Billing Address"
+                      />
+                    </div>
+
+                    <!-- Confirmation -->
+                    <div class="col-md-12 mt-3">
+                      <h5>Additional Notes</h5>
+                      <textarea
+                        name="additionalNotes"
+                        id="notes"
+                        class="form-control"
+                        placeholder="Enter any special instructions..."
+                      ></textarea>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-check mt-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="agree_terms"
+                          name="agree_terms"
+                          required
+                        />
+                        <label class="form-check-label" for="agree_terms"
+                          >I agree to the Terms & Conditions</label
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="col-md-12 mt-4">
+                      <button type="submit" class="btn-main">
+                        Book Shipment
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div id="success_message" class="success">
+                  Your message has been sent successfully. Refresh this page if
+                  you want to send more messages.
+                </div>
+                <div id="error_message" class="error">
+                  Sorry there was an error sending your form.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- content close -->
+
+      <!-- footer begin -->
+      <footer class="text-light section-dark">
+        <div class="container">
+          <div class="row g-4 justify-content-between">
+            <div class="col-md-6">
+              <img src="images/logo-white.webp" class="w-170px mb-2" alt="" />
+              <div class="spacer-single"></div>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="widget">
+                    <h5>Services</h5>
+                    <ul>
+                      <li><a href="service-single.html">Trucking</a></li>
+                      <li><a href="service-single.html">Air Freight</a></li>
+                      <li><a href="service-single.html">Ship Freight</a></li>
+                      <li><a href="service-single.html">Rail Freight</a></li>
+                      <li><a href="service-single.html">Warehousing</a></li>
+                      <li>
+                        <a href="service-single.html">Customs Brokerage</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="widget">
+                    <h5>Company</h5>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="team.html">Our Team</a></li>
+                      <li><a href="careers.html">Careers</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-icons mb-sm-30 text-center">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="d-flex align-items-center justify-content-between">
+                <h2>Get in Touch</h2>
+                <img
+                  src="images/ui/up-right-arrow.webp"
+                  class="w-60px op-5"
+                  alt=""
+                />
+              </div>
+
+              <div class="widget">
+                <div class="op-5 fs-15">Email</div>
+                <h3>contact@logixpress.com</h3>
+
+                <div class="spacer-20"></div>
+
+                <div class="op-5 fs-15">Phone</div>
+                <h3>+929 333 9296</h3>
+
+                <div class="spacer-20"></div>
+
+                <div class="op-5 fs-15">Office Location</div>
+                <h3>100 S Main St, New York, NY</h3>
+
+                <div class="spacer-20"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subfooter">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                Copyright 2025 LogiXpress by Designesia
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer close -->
+    </div>
+
+    <!-- overlay content begin -->
+    <div id="extra-wrap" class="text-light">
+      <div id="btn-close">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="extra-content">
+        <img src="images/logo-white.webp" class="w-200px" alt="" />
+
+        <div class="spacer-30-line"></div>
+
+        <h5>Our Services</h5>
+        <ul class="ul-check">
+          <li>Trucking</li>
+          <li>Air Fright</li>
+          <li>Ship Freight</li>
+          <li>Rail Freight</li>
+          <li>Warehousing</li>
+          <li>Customs Brokerage</li>
+          <li>Last-Mile Delivery</li>
+          <li>Project Cargo</li>
+        </ul>
+
+        <div class="spacer-30-line"></div>
+
+        <h5>Contact Us</h5>
+        <div><i class="icofont-phone me-2 op-5"></i>+929 333 9296</div>
+        <div>
+          <i class="icofont-location-pin me-2 op-5"></i>100 S Main St, New York,
+          NY
+        </div>
+        <div>
+          <i class="icofont-envelope me-2 op-5"></i>contact@logixpress.com
+        </div>
+
+        <div class="spacer-30-line"></div>
+
+        <h5>About Us</h5>
+        <p>
+          We are a trusted logistics and cargo solutions provider committed to
+          delivering your goods safely, efficiently, and on time. With years of
+          experience in freight forwarding, warehousing, and international
+          shipping.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- overlay content end -->
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <!-- <script src="js/validation-booking.js"></script> -->
+    <script>
+      function previewImages(event) {
+        const preview = document.getElementById("imagePreview");
+        preview.innerHTML = ""; // Clear previous previews
+        const files = event.target.files;
+
+        Array.from(files).forEach((file) => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            preview.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+    </script>
+  </body>
+</html>

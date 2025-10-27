@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- fontawesome icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- logo icon on title -->
+    <link rel="icon" href="/images/fav-icon.svg" type="image/svg" />
+    <title>Ker Active</title>
+  </head>
+  <body class="bg-light">
+    <section class="s">
+      <div
+        id="web"
+        style="position: relative; z-index: -2; width: 100%"
+        class="flex-wrap"
+      >
+        <div class="row gap-0">
+          <div class="col-md p-0">
+            <img src="<%= coachDetails.coachImage %>" width="100%" alt="" class="" />
+          </div>
+
+          <div
+            style="background: linear-gradient(0deg, #f7a172 0%, #f7a172 100%)"
+            class="col-md text-end p-5"
+          >
+            <div class="hero-text my-5 py-md-5">
+              <h1
+                id="web"
+                style="
+                  color: rgba(255, 255, 255, 0.3);
+                  font-size: 100px;
+                  line-height: 90px;
+                  position: relative;
+                "
+                class="pt-5 coch"
+              >
+              <%=coachDetails.coachFirstname%> <br />
+                <%=coachDetails.coachLastname%> <br>
+              </h1>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="trainers-social-icons mt-2">
+                <button class="me-4">
+                  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="31"
+                    viewBox="0 0 42 41"
+                    fill="none"
+                    onclick="location.href='<%=coachDetails.coachSocial%>'"
+                  >
+                    <path
+                      d="M6.59518 0.248138C3.41806 0.248138 0.834961 2.81225 0.834961 5.96601V34.5554C0.834961 37.7092 3.41806 40.2733 6.59518 40.2733H35.3963C38.5734 40.2733 41.1565 37.7092 41.1565 34.5554V5.96601C41.1565 2.81225 38.5734 0.248138 35.3963 0.248138H6.59518ZM33.3352 7.75285L23.9929 18.3488L34.9823 32.7686H26.378L19.6457 24.022L11.9324 32.7686H7.65723L17.6476 21.4311L7.1082 7.75285H15.9285L22.0218 15.7489L29.0601 7.75285H33.3352ZM29.9331 30.2312L14.6415 10.1561H12.0944L27.557 30.2312H29.9241H29.9331Z"
+                      fill="#F9BD9C"
+                    />
+                  </svg>
+                
+                </button>
+                <button class="">
+                  <a href=" <%= coachDetails.coachSocial %>">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                  >
+                    <path
+                      d="M22.5104 0.248138C24.7784 0.254142 25.9295 0.266149 26.9234 0.294166L27.3145 0.308175C27.7661 0.324184 28.2116 0.344196 28.7499 0.368211C30.8949 0.468271 32.3585 0.804475 33.6427 1.29877C34.9732 1.80708 36.0941 2.4955 37.215 3.60617C38.2401 4.60656 39.0333 5.81668 39.5394 7.15231C40.0373 8.42708 40.376 9.87996 40.4768 12.0112C40.501 12.5436 40.5212 12.9858 40.5373 13.4361L40.5494 13.8243C40.5796 14.8089 40.5917 15.9516 40.5958 18.203L40.5978 19.6959V22.3175C40.6027 23.7772 40.5873 25.2369 40.5514 26.6961L40.5393 27.0844C40.5232 27.5346 40.503 27.9769 40.4788 28.5092C40.378 30.6405 40.0353 32.0914 39.5394 33.3682C39.0347 34.7045 38.2413 35.9149 37.215 36.9143C36.2069 37.9316 34.9879 38.7189 33.6427 39.2217C32.3585 39.716 30.8949 40.0522 28.7499 40.1523C28.2715 40.1746 27.7931 40.1946 27.3145 40.2123L26.9234 40.2243C25.9295 40.2523 24.7784 40.2663 22.5104 40.2703L21.0065 40.2723H18.3676C16.8965 40.2774 15.4253 40.262 13.9546 40.2263L13.5635 40.2143C13.085 40.1963 12.6065 40.1756 12.1282 40.1523C9.98317 40.0522 8.51957 39.716 7.23338 39.2217C5.88805 38.7201 4.66949 37.9326 3.66308 36.9143C2.63705 35.9143 1.84311 34.7041 1.33665 33.3682C0.838704 32.0934 0.50002 30.6405 0.399221 28.5092C0.376761 28.0344 0.356601 27.5594 0.338742 27.0844L0.328662 26.6961C0.291512 25.2369 0.274711 23.7772 0.278263 22.3175V18.203C0.272636 16.7433 0.287422 15.2836 0.322614 13.8243L0.336726 13.4361C0.352854 12.9858 0.373014 12.5436 0.397205 12.0112C0.498004 9.87996 0.836688 8.42908 1.33463 7.15231C1.84087 5.81531 2.63639 4.60482 3.6651 3.60617C4.67126 2.5885 5.88901 1.80105 7.23338 1.29877C8.51957 0.804475 9.98115 0.468271 12.1282 0.368211C12.6644 0.344196 13.112 0.324184 13.5635 0.308175L13.9546 0.296167C15.4247 0.260611 16.8951 0.245267 18.3656 0.250139L22.5104 0.248138ZM20.438 10.2542C17.7647 10.2542 15.2008 11.3084 13.3105 13.1849C11.4201 15.0614 10.3581 17.6065 10.3581 20.2602C10.3581 22.914 11.4201 25.4591 13.3105 27.3356C15.2008 29.2121 17.7647 30.2663 20.438 30.2663C23.1114 30.2663 25.6752 29.2121 27.5656 27.3356C29.4559 25.4591 30.5179 22.914 30.5179 20.2602C30.5179 17.6065 29.4559 15.0614 27.5656 13.1849C25.6752 11.3084 23.1114 10.2542 20.438 10.2542ZM20.438 14.2566C21.2322 14.2565 22.0187 14.4116 22.7525 14.7132C23.4864 15.0148 24.1531 15.4569 24.7148 16.0143C25.2765 16.5717 25.7221 17.2335 26.0262 17.9618C26.3302 18.6902 26.4868 19.4708 26.4869 20.2592C26.4871 21.0476 26.3308 21.8284 26.027 22.5568C25.7232 23.2852 25.2778 23.9472 24.7163 24.5047C24.1548 25.0623 23.4881 25.5046 22.7544 25.8065C22.0207 26.1083 21.2343 26.2637 20.44 26.2639C18.836 26.2639 17.2977 25.6313 16.1635 24.5054C15.0293 23.3795 14.3921 21.8525 14.3921 20.2602C14.3921 18.668 15.0293 17.1409 16.1635 16.015C17.2977 14.8891 18.836 14.2566 20.44 14.2566M31.0239 7.25237C30.3556 7.25237 29.7146 7.51592 29.242 7.98505C28.7694 8.45417 28.5039 9.09044 28.5039 9.75388C28.5039 10.4173 28.7694 11.0536 29.242 11.5227C29.7146 11.9918 30.3556 12.2554 31.0239 12.2554C31.6922 12.2554 32.3332 11.9918 32.8058 11.5227C33.2784 11.0536 33.5439 10.4173 33.5439 9.75388C33.5439 9.09044 33.2784 8.45417 32.8058 7.98505C32.3332 7.51592 31.6922 7.25237 31.0239 7.25237Z"
+                      fill="#F9BD9C"
+                    />
+                  </svg>
+                </a>
+                </button>
+              </div>
+              <h3
+                style="
+                  color: rgba(255, 255, 255, 0.3);
+                  
+                  letter-spacing: -1.425px;
+                  position: absolute;
+                  right: 20px;
+                "
+                class="locate"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="31"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                >
+                  <path
+                    d="M0 7.17556C0 5.3383 0.735257 3.57628 2.04402 2.27713C3.35279 0.97799 5.12786 0.248138 6.97873 0.248138H33.3428C35.1937 0.248138 36.9688 0.97799 38.2775 2.27713C39.5863 3.57628 40.3216 5.3383 40.3216 7.17556V33.3458C40.3216 35.1831 39.5863 36.9451 38.2775 38.2443C36.9688 39.5434 35.1937 40.2733 33.3428 40.2733H6.97873C5.12786 40.2733 3.35279 39.5434 2.04402 38.2443C0.735257 36.9451 0 35.1831 0 33.3458V7.17556ZM20.1608 7.94528C19.7495 7.94528 19.355 8.10747 19.0642 8.39617C18.7733 8.68486 18.61 9.07642 18.61 9.48471V11.1519C16.7049 11.4724 14.9475 12.3732 13.5812 13.7295C12.2149 15.0857 11.3074 16.8302 10.9845 18.7213H9.30498C8.89367 18.7213 8.49921 18.8835 8.20837 19.1722C7.91754 19.4609 7.75415 19.8524 7.75415 20.2607C7.75415 20.669 7.91754 21.0605 8.20837 21.3492C8.49921 21.6379 8.89367 21.8001 9.30498 21.8001H10.9845C11.3074 23.6912 12.2149 25.4357 13.5812 26.7919C14.9475 28.1482 16.7049 29.049 18.61 29.3695V31.0367C18.61 31.445 18.7733 31.8365 19.0642 32.1252C19.355 32.4139 19.7495 32.5761 20.1608 32.5761C20.5721 32.5761 20.9666 32.4139 21.2574 32.1252C21.5482 31.8365 21.7116 31.445 21.7116 31.0367V29.3695C23.6167 29.049 25.3741 28.1482 26.7404 26.7919C28.1067 25.4357 29.0141 23.6912 29.337 21.8001H31.0166C31.4279 21.8001 31.8224 21.6379 32.1132 21.3492C32.404 21.0605 32.5674 20.669 32.5674 20.2607C32.5674 19.8524 32.404 19.4609 32.1132 19.1722C31.8224 18.8835 31.4279 18.7213 31.0166 18.7213H29.337C29.0141 16.8302 28.1067 15.0857 26.7404 13.7295C25.3741 12.3732 23.6167 11.4724 21.7116 11.1519V9.48471C21.7116 9.07642 21.5482 8.68486 21.2574 8.39617C20.9666 8.10747 20.5721 7.94528 20.1608 7.94528ZM20.1608 14.103C18.5156 14.103 16.9377 14.7517 15.7744 15.9065C14.611 17.0613 13.9575 18.6276 13.9575 20.2607C13.9575 21.8938 14.611 23.4601 15.7744 24.6149C16.9377 25.7697 18.5156 26.4184 20.1608 26.4184C21.806 26.4184 23.3838 25.7697 24.5472 24.6149C25.7105 23.4601 26.3641 21.8938 26.3641 20.2607C26.3641 18.6276 25.7105 17.0613 24.5472 15.9065C23.3838 14.7517 21.806 14.103 20.1608 14.103ZM20.1608 23.3396C19.3382 23.3396 18.5493 23.0152 17.9676 22.4378C17.3859 21.8604 17.0591 21.0773 17.0591 20.2607C17.0591 19.4441 17.3859 18.661 17.9676 18.0836C18.5493 17.5062 19.3382 17.1818 20.1608 17.1818C20.9834 17.1818 21.7723 17.5062 22.354 18.0836C22.9357 18.661 23.2624 19.4441 23.2624 20.2607C23.2624 21.0773 22.9357 21.8604 22.354 22.4378C21.7723 23.0152 20.9834 23.3396 20.1608 23.3396Z"
+                    fill="white"
+                    fill-opacity="0.6"
+                  />
+                </svg>
+                <%= coachDetails.coachLocation %>
+              </h3>
+            </div>
+            <div class="trainer-services pt-5 d-flex flex-wrap mt-3 gap-4">
+              <% if (coachDetails && coachDetails.coachServices) { %>
+                <% let serviceArray = Object.values(coachDetails.coachServices) %>
+                <% serviceArray.forEach(service => { %>
+                  <button class="trainer-btn "><%= service %></button>
+                <% }); %>
+              <% } else { %>
+                <!-- Optionally, display a message or handle the case where coachServices is undefined or null -->
+                <p>No services available.</p>
+              <% } %>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div
+        id="mobile"
+        style="position: relative; z-index: -2; width: 100%"
+        class="flex-wrap"
+      >
+        <div class="row gap-0">
+          <div class="col-md p-0">
+            <img src="<%= coachDetails.coachImage %>" alt="" class="w-100" />
+          </div>
+
+          <div
+            style="background: linear-gradient(0deg, #f7a172 0%, #f7a172 100%)"
+            class="col-md text-end p-5"
+          >
+            <div class="hero-text my-5 py-md-5">
+              <h1
+                id="mob"
+                style="
+                  color: rgba(255, 255, 255, 0.3);
+                  font-size: 100px;
+                  line-height: 90px;
+                  position: relative;
+                "
+                class="pt-5 coch"
+              >
+              <%=coachDetails.coachFirstname%> <br />
+              <%=coachDetails.coachLastname%> <br>
+
+              </h1>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="trainers-social-icons mt-2">
+                <button class="me-4">
+                  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="31"
+                    viewBox="0 0 42 41"
+                    fill="none"
+                    onclick="location.href='<%=coachDetails.coachTwitter%>'"
+                  >
+                    <path
+                      d="M6.59518 0.248138C3.41806 0.248138 0.834961 2.81225 0.834961 5.96601V34.5554C0.834961 37.7092 3.41806 40.2733 6.59518 40.2733H35.3963C38.5734 40.2733 41.1565 37.7092 41.1565 34.5554V5.96601C41.1565 2.81225 38.5734 0.248138 35.3963 0.248138H6.59518ZM33.3352 7.75285L23.9929 18.3488L34.9823 32.7686H26.378L19.6457 24.022L11.9324 32.7686H7.65723L17.6476 21.4311L7.1082 7.75285H15.9285L22.0218 15.7489L29.0601 7.75285H33.3352ZM29.9331 30.2312L14.6415 10.1561H12.0944L27.557 30.2312H29.9241H29.9331Z"
+                      fill="#F9BD9C"
+                    />
+                  </svg>
+                
+                </button>
+                <button class="">
+                  <a href=" <%= coachDetails.coachInstagram %>">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 41 41"
+                    fill="none"
+                  >
+                    <path
+                      d="M22.5104 0.248138C24.7784 0.254142 25.9295 0.266149 26.9234 0.294166L27.3145 0.308175C27.7661 0.324184 28.2116 0.344196 28.7499 0.368211C30.8949 0.468271 32.3585 0.804475 33.6427 1.29877C34.9732 1.80708 36.0941 2.4955 37.215 3.60617C38.2401 4.60656 39.0333 5.81668 39.5394 7.15231C40.0373 8.42708 40.376 9.87996 40.4768 12.0112C40.501 12.5436 40.5212 12.9858 40.5373 13.4361L40.5494 13.8243C40.5796 14.8089 40.5917 15.9516 40.5958 18.203L40.5978 19.6959V22.3175C40.6027 23.7772 40.5873 25.2369 40.5514 26.6961L40.5393 27.0844C40.5232 27.5346 40.503 27.9769 40.4788 28.5092C40.378 30.6405 40.0353 32.0914 39.5394 33.3682C39.0347 34.7045 38.2413 35.9149 37.215 36.9143C36.2069 37.9316 34.9879 38.7189 33.6427 39.2217C32.3585 39.716 30.8949 40.0522 28.7499 40.1523C28.2715 40.1746 27.7931 40.1946 27.3145 40.2123L26.9234 40.2243C25.9295 40.2523 24.7784 40.2663 22.5104 40.2703L21.0065 40.2723H18.3676C16.8965 40.2774 15.4253 40.262 13.9546 40.2263L13.5635 40.2143C13.085 40.1963 12.6065 40.1756 12.1282 40.1523C9.98317 40.0522 8.51957 39.716 7.23338 39.2217C5.88805 38.7201 4.66949 37.9326 3.66308 36.9143C2.63705 35.9143 1.84311 34.7041 1.33665 33.3682C0.838704 32.0934 0.50002 30.6405 0.399221 28.5092C0.376761 28.0344 0.356601 27.5594 0.338742 27.0844L0.328662 26.6961C0.291512 25.2369 0.274711 23.7772 0.278263 22.3175V18.203C0.272636 16.7433 0.287422 15.2836 0.322614 13.8243L0.336726 13.4361C0.352854 12.9858 0.373014 12.5436 0.397205 12.0112C0.498004 9.87996 0.836688 8.42908 1.33463 7.15231C1.84087 5.81531 2.63639 4.60482 3.6651 3.60617C4.67126 2.5885 5.88901 1.80105 7.23338 1.29877C8.51957 0.804475 9.98115 0.468271 12.1282 0.368211C12.6644 0.344196 13.112 0.324184 13.5635 0.308175L13.9546 0.296167C15.4247 0.260611 16.8951 0.245267 18.3656 0.250139L22.5104 0.248138ZM20.438 10.2542C17.7647 10.2542 15.2008 11.3084 13.3105 13.1849C11.4201 15.0614 10.3581 17.6065 10.3581 20.2602C10.3581 22.914 11.4201 25.4591 13.3105 27.3356C15.2008 29.2121 17.7647 30.2663 20.438 30.2663C23.1114 30.2663 25.6752 29.2121 27.5656 27.3356C29.4559 25.4591 30.5179 22.914 30.5179 20.2602C30.5179 17.6065 29.4559 15.0614 27.5656 13.1849C25.6752 11.3084 23.1114 10.2542 20.438 10.2542ZM20.438 14.2566C21.2322 14.2565 22.0187 14.4116 22.7525 14.7132C23.4864 15.0148 24.1531 15.4569 24.7148 16.0143C25.2765 16.5717 25.7221 17.2335 26.0262 17.9618C26.3302 18.6902 26.4868 19.4708 26.4869 20.2592C26.4871 21.0476 26.3308 21.8284 26.027 22.5568C25.7232 23.2852 25.2778 23.9472 24.7163 24.5047C24.1548 25.0623 23.4881 25.5046 22.7544 25.8065C22.0207 26.1083 21.2343 26.2637 20.44 26.2639C18.836 26.2639 17.2977 25.6313 16.1635 24.5054C15.0293 23.3795 14.3921 21.8525 14.3921 20.2602C14.3921 18.668 15.0293 17.1409 16.1635 16.015C17.2977 14.8891 18.836 14.2566 20.44 14.2566M31.0239 7.25237C30.3556 7.25237 29.7146 7.51592 29.242 7.98505C28.7694 8.45417 28.5039 9.09044 28.5039 9.75388C28.5039 10.4173 28.7694 11.0536 29.242 11.5227C29.7146 11.9918 30.3556 12.2554 31.0239 12.2554C31.6922 12.2554 32.3332 11.9918 32.8058 11.5227C33.2784 11.0536 33.5439 10.4173 33.5439 9.75388C33.5439 9.09044 33.2784 8.45417 32.8058 7.98505C32.3332 7.51592 31.6922 7.25237 31.0239 7.25237Z"
+                      fill="#F9BD9C"
+                    />
+                  </svg>
+                </a>
+                </button>
+              </div>
+              <h3
+                style="
+                  color: rgba(255, 255, 255, 0.3);
+                  
+                  letter-spacing: -1.425px;
+                  position: absolute;
+                  right: 20px;
+                "
+                class="locate"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="31"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                >
+                  <path
+                    d="M0 7.17556C0 5.3383 0.735257 3.57628 2.04402 2.27713C3.35279 0.97799 5.12786 0.248138 6.97873 0.248138H33.3428C35.1937 0.248138 36.9688 0.97799 38.2775 2.27713C39.5863 3.57628 40.3216 5.3383 40.3216 7.17556V33.3458C40.3216 35.1831 39.5863 36.9451 38.2775 38.2443C36.9688 39.5434 35.1937 40.2733 33.3428 40.2733H6.97873C5.12786 40.2733 3.35279 39.5434 2.04402 38.2443C0.735257 36.9451 0 35.1831 0 33.3458V7.17556ZM20.1608 7.94528C19.7495 7.94528 19.355 8.10747 19.0642 8.39617C18.7733 8.68486 18.61 9.07642 18.61 9.48471V11.1519C16.7049 11.4724 14.9475 12.3732 13.5812 13.7295C12.2149 15.0857 11.3074 16.8302 10.9845 18.7213H9.30498C8.89367 18.7213 8.49921 18.8835 8.20837 19.1722C7.91754 19.4609 7.75415 19.8524 7.75415 20.2607C7.75415 20.669 7.91754 21.0605 8.20837 21.3492C8.49921 21.6379 8.89367 21.8001 9.30498 21.8001H10.9845C11.3074 23.6912 12.2149 25.4357 13.5812 26.7919C14.9475 28.1482 16.7049 29.049 18.61 29.3695V31.0367C18.61 31.445 18.7733 31.8365 19.0642 32.1252C19.355 32.4139 19.7495 32.5761 20.1608 32.5761C20.5721 32.5761 20.9666 32.4139 21.2574 32.1252C21.5482 31.8365 21.7116 31.445 21.7116 31.0367V29.3695C23.6167 29.049 25.3741 28.1482 26.7404 26.7919C28.1067 25.4357 29.0141 23.6912 29.337 21.8001H31.0166C31.4279 21.8001 31.8224 21.6379 32.1132 21.3492C32.404 21.0605 32.5674 20.669 32.5674 20.2607C32.5674 19.8524 32.404 19.4609 32.1132 19.1722C31.8224 18.8835 31.4279 18.7213 31.0166 18.7213H29.337C29.0141 16.8302 28.1067 15.0857 26.7404 13.7295C25.3741 12.3732 23.6167 11.4724 21.7116 11.1519V9.48471C21.7116 9.07642 21.5482 8.68486 21.2574 8.39617C20.9666 8.10747 20.5721 7.94528 20.1608 7.94528ZM20.1608 14.103C18.5156 14.103 16.9377 14.7517 15.7744 15.9065C14.611 17.0613 13.9575 18.6276 13.9575 20.2607C13.9575 21.8938 14.611 23.4601 15.7744 24.6149C16.9377 25.7697 18.5156 26.4184 20.1608 26.4184C21.806 26.4184 23.3838 25.7697 24.5472 24.6149C25.7105 23.4601 26.3641 21.8938 26.3641 20.2607C26.3641 18.6276 25.7105 17.0613 24.5472 15.9065C23.3838 14.7517 21.806 14.103 20.1608 14.103ZM20.1608 23.3396C19.3382 23.3396 18.5493 23.0152 17.9676 22.4378C17.3859 21.8604 17.0591 21.0773 17.0591 20.2607C17.0591 19.4441 17.3859 18.661 17.9676 18.0836C18.5493 17.5062 19.3382 17.1818 20.1608 17.1818C20.9834 17.1818 21.7723 17.5062 22.354 18.0836C22.9357 18.661 23.2624 19.4441 23.2624 20.2607C23.2624 21.0773 22.9357 21.8604 22.354 22.4378C21.7723 23.0152 20.9834 23.3396 20.1608 23.3396Z"
+                    fill="white"
+                    fill-opacity="0.6"
+                  />
+                </svg>
+                <%= coachDetails.coachLocation %>
+              </h3>
+            </div>
+            <div class="trainer-services pt-5 d-flex flex-wrap mt-3 gap-4">
+              <% if (coachDetails && coachDetails.coachServices) { %>
+                <% let coachServiceArray = Object.values(coachDetails.coachServices); %>
+                <% coachServiceArray.forEach(service => { %>
+                  <button class="trainer-btn"><%= service %></button>
+                <% }); %>
+              <% } else { %>
+                <!-- Handle the case where coachServices is undefined or null -->
+                <p>No services available.</p>
+              <% } %>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <nav class="section">
+        <div class="d-flex align-items-center">
+          <img
+            onclick="location.href='/'"
+            src="/images/Brand-logo.svg"
+            alt="brand logo"
+            class="brand-logo"
+          />
+        </div>
+
+        <div class="nav-links" id="nav-links">
+          <ul class="navbar-links">
+            <li onclick="location.href='/'" class="">HOME</li>
+            <li onclick="location.href='/trainers'" class="">TRAINERS</li>
+            <li onclick="location.href='/contact'" class="">CONTACT</li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <section
+      style="
+        padding-bottom: 15rem;
+        background: url(/images/paper-edge.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      "
+      class="edge-rel"
+    >
+      <section class="pt-5 paper-effect zag">
+        <img src="/images/edge effect.png" alt="" class="w-100"> 
+        <img src="/images/paper-edge2.png" alt="" class="w-100" />
+      </section>
+
+
+
+      <!-- <div class="sub2 px-5">
+        <div class="mobile split-mobile">
+          <button class="btn-custom active me-4">Services</button>
+         <button class="btn-custom">
+            Body Building
+          </button>
+          <button class="btn-custom">
+            Private Personal Training
+          </button>
+          <button class="btn-custom">
+            Online Personal Training
+          </button> 
+          <button class="btn-custom">Improving General Fitness</button>
+          <button class="btn-custom">
+            Womens Fitness
+          </button>
+          <button class="btn-custom">
+            Weight Loss
+          </button> 
+        </div>
+      </div> -->
+
+      <div class="text-center others_trainers">
+        <h1 class="reason-v2">OTHER TRAINERS</h1>
+      </div>
+
+    
+
+
+
+      <div id="web" class="swiper mySwiper pt-5 mt-5">
+        <div class="swiper-wrapper">
+          <% if (Array.isArray(trainers)) { %>
+            
+          <% trainers.forEach(trainer => { %>
+            <% var trainerLink = '/coaches/' + trainer._id; %>
+            <div class="swiper-slide instructors">
+            <a href="<%= trainerLink %>"> <img src="<%= trainer.image%>" alt="" class="coach-img"/> </a>
+          </div>
+          
+          <div class="swiper-slide idealTrainer text-start instructors" onclick="location.href='<%= trainerLink %>'">
+            <div class="w-25">
+              <img
+                onclick="location.href='/'"
+                src="/images/ke-logo.svg"
+                alt="ke-logo"
+                class="sub-logo me-auto"
+              />
+            </div>
+            <div class="text-end trainer-header-v2">
+            <h1 class=""
+            onclick="location.href='<%= trainerLink %>'"
+            >
+            <%=trainer.firstname%> <br />
+            <%=trainer.lastname%> <br>
+            
+                <!--<span style="color: #f7a172;" class="">COACH</span> -->
+              </h1>
+            </div> 
+
+            <div class="d-flex align-items-end justify-content-between pt-5">
+              <div class="sub-text">
+                <!-- <h3 class="">
+                 <%= trainer.location  %>
+                </h3> -->
+                <p class="trainers-location pb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path d="M0 3.6961C0 2.78479 0.364697 1.91081 1.01386 1.26642C1.66303 0.622025 2.54348 0.26001 3.46154 0.26001H16.5385C17.4565 0.26001 18.337 0.622025 18.9861 1.26642C19.6353 1.91081 20 2.78479 20 3.6961V16.6769C20 17.5882 19.6353 18.4622 18.9861 19.1066C18.337 19.751 17.4565 20.113 16.5385 20.113H3.46154C2.54348 20.113 1.66303 19.751 1.01386 19.1066C0.364697 18.4622 0 17.5882 0 16.6769V3.6961ZM10 4.07789C9.79599 4.07789 9.60033 4.15834 9.45607 4.30153C9.31181 4.44473 9.23077 4.63895 9.23077 4.84146V5.66842C8.28584 5.8274 7.41413 6.27421 6.73644 6.94693C6.05875 7.61964 5.60863 8.48494 5.44846 9.42292H4.61538C4.41137 9.42292 4.21572 9.50336 4.07146 9.64656C3.9272 9.78976 3.84615 9.98398 3.84615 10.1865C3.84615 10.389 3.9272 10.5832 4.07146 10.7264C4.21572 10.8696 4.41137 10.9501 4.61538 10.9501H5.44846C5.60863 11.888 6.05875 12.7533 6.73644 13.4261C7.41413 14.0988 8.28584 14.5456 9.23077 14.7046V15.5315C9.23077 15.734 9.31181 15.9283 9.45607 16.0714C9.60033 16.2146 9.79599 16.2951 10 16.2951C10.204 16.2951 10.3997 16.2146 10.5439 16.0714C10.6882 15.9283 10.7692 15.734 10.7692 15.5315V14.7046C11.7142 14.5456 12.5859 14.0988 13.2636 13.4261C13.9413 12.7533 14.3914 11.888 14.5515 10.9501H15.3846C15.5886 10.9501 15.7843 10.8696 15.9285 10.7264C16.0728 10.5832 16.1538 10.389 16.1538 10.1865C16.1538 9.98398 16.0728 9.78976 15.9285 9.64656C15.7843 9.50336 15.5886 9.42292 15.3846 9.42292H14.5515C14.3914 8.48494 13.9413 7.61964 13.2636 6.94693C12.5859 6.27421 11.7142 5.8274 10.7692 5.66842V4.84146C10.7692 4.63895 10.6882 4.44473 10.5439 4.30153C10.3997 4.15834 10.204 4.07789 10 4.07789ZM10 7.13219C9.18395 7.13219 8.40132 7.45398 7.82429 8.02677C7.24725 8.59957 6.92308 9.37644 6.92308 10.1865C6.92308 10.9965 7.24725 11.7734 7.82429 12.3462C8.40132 12.919 9.18395 13.2408 10 13.2408C10.8161 13.2408 11.5987 12.919 12.1757 12.3462C12.7527 11.7734 13.0769 10.9965 13.0769 10.1865C13.0769 9.37644 12.7527 8.59957 12.1757 8.02677C11.5987 7.45398 10.8161 7.13219 10 7.13219ZM10 11.7136C9.59198 11.7136 9.20066 11.5527 8.91214 11.2663C8.62363 10.98 8.46154 10.5915 8.46154 10.1865C8.46154 9.78147 8.62363 9.39303 8.91214 9.10663C9.20066 8.82024 9.59198 8.65934 10 8.65934C10.408 8.65934 10.7993 8.82024 11.0879 9.10663C11.3764 9.39303 11.5385 9.78147 11.5385 10.1865C11.5385 10.5915 11.3764 10.98 11.0879 11.2663C10.7993 11.5527 10.408 11.7136 10 11.7136Z" fill="#2D2C2A"/>
+                  </svg>
+              <%= trainer.location %>
+                  
+                </p>
+                <div class="d-flex justify-content-between">
+                  <h4 class="text-light"><%= trainer.services[0] %> </h4>
+                </div>
+              </div>
+              <div class="pseudo"></div>
+            </div>
+          </div>
+          <% }) %>
+          <% } else { %>
+            <!-- Handle the case where trainers is not an array -->
+        <% } %>
+      </div>
+    </div>
+
+
+
+
+
+      
+      <div class="text-center inner-trainer-div">
+        <div class="Carousel-Indicators">
+          <!-- Indicators -->
+
+          <!-- Left and right controls -->
+
+          <button
+            class="indicator-btn-prev indicator-btn"
+            data-bs-target=".swiper"
+            data-bs-slide="prev"
+            id="prevButton"
+          >
+        
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="16"
+              viewBox="0 0 35 16"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_44_1252)">
+                <path
+                  d="M5.54271 6.78403H34.3147L34.314 7.12012V9.21797H5.54271L9.12609 12.7986L9.29692 12.97L9.53501 13.2073L9.29692 13.4453L9.12609 13.616L8.22218 14.5194L8.05135 14.6908L7.81326 14.9281L7.57585 14.6901L7.40435 14.5194L1.29081 8.40935L1.11998 8.23861L0.882568 8.00134L1.11998 7.76339L1.29148 7.59266L7.40502 1.48259L7.57585 1.31186L7.81326 1.07458L8.05135 1.31186L8.22218 1.48327L9.12609 2.386L9.29692 2.5574L9.53501 2.79468L9.29692 3.03263L9.12609 3.20336L5.54271 6.7847V6.78403Z"
+                  fill="#2D2C2A"
+                  stroke="#2D2C2A"
+                  stroke-width="0.672557"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_44_1252">
+                  <rect
+                    width="35"
+                    height="15.46"
+                    fill="white"
+                    transform="translate(0 0.27002)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <div class="indicators-dots"></div>
+
+          <button
+            class="indicator-btn-next indicator-btn"
+            data-bs-target=".swiper"
+            data-bs-slide="next"
+            id="nextButton"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="16"
+              viewBox="0 0 35 16"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_44_1255)">
+                <path
+                  d="M0.936515 9.23097H0.346436V6.75117H29.3495L25.6938 3.09965L25.5188 2.9256L25.2766 2.68304L25.5188 2.44115L25.6938 2.26642L26.6153 1.34549L26.7902 1.17145L27.0331 0.929565L27.2753 1.17145L27.4496 1.34549L33.6866 7.57412L33.8609 7.74816L34.1038 7.99073L33.8609 8.23261L33.6866 8.40734L27.4489 14.6353L27.2747 14.8093L27.0324 15.0519L26.7896 14.8093L26.6153 14.6353L25.6931 13.7144L25.5181 13.5403L25.2759 13.2977L25.5181 13.0552L25.6931 12.8811L29.3489 9.23029L0.935829 9.23097H0.936515Z"
+                  fill="#2D2C2A"
+                />
+                <path
+                  d="M0.936515 9.23097H0.346436V6.75117H29.3495L25.6938 3.09965L25.5188 2.9256L25.2766 2.68304L25.5188 2.44115L25.6938 2.26642L26.6153 1.34549L26.7902 1.17145L27.0331 0.929565L27.2753 1.17145L27.4496 1.34549L33.6866 7.57412L33.8609 7.74816L34.1038 7.99073L33.8609 8.23261L33.6866 8.40734L27.4489 14.6353L27.2746 14.8093L27.0324 15.0519L26.7896 14.8093L26.6153 14.6353L25.6931 13.7144L25.5181 13.5403L25.2759 13.2977L25.5181 13.0552L25.6931 12.8811L29.3489 9.23029L0.935829 9.23097H0.936515ZM0.936515 9.23097V8.88837"
+                  stroke="#2D2C2A"
+                  stroke-width="0.686139"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_44_1255">
+                  <rect
+                    width="35"
+                    height="15.76"
+                    fill="white"
+                    transform="translate(0 0.109985)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <button
+          type="button"
+          style="background: #161717; color: white"
+          class="rounded-pill view_all"
+        >
+          VIEW ALL COACHES
+          <span class="ps-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_405_89)">
+                <path
+                  d="M12.5 24.22C19.1274 24.22 24.5 18.8474 24.5 12.22C24.5 5.59255 19.1274 0.219971 12.5 0.219971C5.87258 0.219971 0.5 5.59255 0.5 12.22C0.5 18.8474 5.87258 24.22 12.5 24.22Z"
+                  fill="#EBE8E0"
+                />
+                <path
+                  d="M13.4332 14.128L9.36541 10.0602L9.26827 9.96347L9.13379 9.82862L9.26827 9.69376L9.36541 9.597L9.87703 9.08538L9.97379 8.98862L10.1086 8.85376L10.2435 8.98862L10.3403 9.08538L14.4081 13.1532V9.95509H15.7871V15.5075H10.2351V14.1284L13.4332 14.128Z"
+                  fill="#2D2C2A"
+                  stroke="#2D2C2A"
+                  stroke-width="0.569444"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_405_89">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(0.5 0.219971)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <div id="carouselExampleAutoplaying" class="carousel slide mobile mt-5 pt-5" data-interval="100" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% if (Array.isArray(trainers)) { %>
+            <% trainers.forEach((trainer, index) => { %>
+              <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                <div class="w-100 d-flex align-items-center gap-0" style="height: 300px;">
+                  <% var trainerLink = '/coaches/' + trainer._id; %>
+                  <a href="<%= trainerLink %>">
+                    <img style="height: 234px;" src="<%= trainer.image %>" alt="<%= trainer.firstname %> img" class=""/>
+                  </a>
+                  <div style="background-color:#F7A172; height: 234px;" class="w-50 p-2" onclick="location.href='<%= trainerLink %>'">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="w-25">
+                        <img src="/images/ke-logo.svg" alt="ke-logo" class="sub-logo me-auto" onclick="location.href='index.html'"/>
+                      </div>
+                      <div class="text-end trainer-header-v2">
+                        <h1 style="font-size: 20px; line-height: 20px;" onclick="location.href='<%= trainerLink %>'">
+                          <%= trainer.firstname %> <br />
+                          <%= trainer.lastname %> <br>
+                          <!--<span style="color: #f7a172;" class="">COACH</span>-->
+                        </h1>
+                      </div>
+                    </div>
+                    <div style="padding-top: 10rem;" class="d-flex align-items-end justify-content-between">
+                      <div class="sub-text">
+                        <p style="font-size: 10px; line-height:10px;" class="mb-0">
+                          <%= trainer.location %>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                          <h4 class=""><%= trainer.services[0] %> </h4>
+                        </div>
+                      </div>
+                      <div class="pseudo ms-5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <!-- Handle the case where trainers is not an array -->
+          <% } %>
+        </div>
+      </div>
+      
+    </section>
+
+    <footer style="background: #161717">
+      <section style="padding-top: 10rem" class="sub2">
+        <div class="text-center">
+          <p class="lets-talk pb-5">lets talk</p>
+
+          <img
+            src="/images/ker-active-footer-logo.svg"
+            alt=""
+            class="py-5 ker-active-logo"
+          />
+
+          <div class="">
+            <button
+              onclick="location.href='/signup'"
+              class="btn-custom-1 my-5 mx-auto"
+            >
+              GET IN TOUCH <i class="fa-solid fa-arrow-right ms-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex-wrap py-5">
+          <div class="row align-items-start gap-5">
+            <div class="col-md text-start">
+              <img src="/images/ker-active-mini.svg" alt="" class="pb-3" />
+
+              <div class="d-flex align-items-center gap-5 socials pt-4">
+                <span>
+                  <a href="www.instagram.com/keractive_?igsh=NDFzd3BuYnBpc2w5">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </span>
+                INSTAGRAM
+              </div>
+              <div class="d-flex align-items-center gap-5 socials py-4">
+                <span>
+                  <a href="https://www.facebook.com/profile.php?id=61555546987167&mibextid=PtKPJ9">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </span>
+                Facebook
+              </div>
+            </div>
+            <div class="col-md text-start pages">
+              <h2 class="text-light pb-5">PAGES</h2>
+              <h4 class="pb-3">
+                <a
+                  style="color: rgba(255, 255, 255, 0.6)"
+                  href="/"
+                  class="text-decoration-none"
+                  >HOME</a
+                >
+              </h4>
+              <h4 class="pb-3">
+                <a
+                  style="color: rgba(255, 255, 255, 0.6)"
+                  href="/trainers"
+                  class="text-decoration-none"
+                  >TRAINERS</a
+                >
+              </h4>
+              <h4 class="pb-3">
+                <a
+                  style="color: rgba(255, 255, 255, 0.6)"
+                  href="/contact"
+                  class="text-decoration-none"
+                  >CONTACT</a
+                >
+              </h4>
+            </div>
+
+            <div class="subscribe col-md-4 text-start">
+              <h1 style="font-family: Anton" class="text-light">
+                SUBSCRIBE TO OUR NEWS LETTER
+              </h1>
+              <div class="rounded-pill email" style="background: #008080">
+                <input
+                  style="background: #008080"
+                  type="text"
+                  class="w-75 p-3 px-4 rounded-pill text-light"
+                  placeholder="EMAIL"
+                />
+                <button
+                  type="button"
+                  style="background: #161717; color: white"
+                  class="rounded-pill submitBtn"
+                >
+                  SUBMIT
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_405_89)">
+                      <path
+                        d="M12.5 24.22C19.1274 24.22 24.5 18.8474 24.5 12.22C24.5 5.59255 19.1274 0.219971 12.5 0.219971C5.87258 0.219971 0.5 5.59255 0.5 12.22C0.5 18.8474 5.87258 24.22 12.5 24.22Z"
+                        fill="#EBE8E0"
+                      />
+                      <path
+                        d="M13.4332 14.128L9.36541 10.0602L9.26827 9.96347L9.13379 9.82862L9.26827 9.69376L9.36541 9.597L9.87703 9.08538L9.97379 8.98862L10.1086 8.85376L10.2435 8.98862L10.3403 9.08538L14.4081 13.1532V9.95509H15.7871V15.5075H10.2351V14.1284L13.4332 14.128Z"
+                        fill="#2D2C2A"
+                        stroke="#2D2C2A"
+                        stroke-width="0.569444"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_405_89">
+                        <rect
+                          width="24"
+                          height="24"
+                          fill="white"
+                          transform="translate(0.5 0.219971)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="col-md">
+              <div
+                style="margin-top: 12rem"
+                class="socials d-flex align-items-center"
+              >
+                <h5 class="ms-auto mb-0">
+                  <a href="#" class="text-decoration-none text-light">TO Top</a>
+                </h5>
+                <span class="ms-4">
+                  <a
+                    style="color: rgba(255, 255, 255, 0.6)"
+                    href="#"
+                    class="text-decoration-none"
+                    ><i class="fa-solid fa-arrow-up"></i
+                  ></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- js link file -->
+    <script src="/js/script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        watchSlidesProgress: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 4,
+        navigation: {
+          nextEl: ".indicator-btn-next",
+          prevEl: ".indicator-btn-prev",
+        },
+        pagination: {
+          el: ".indicators-dots",
+        },
+      });
+    </script>
+
+    <!-- bootstrap js cdn link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
