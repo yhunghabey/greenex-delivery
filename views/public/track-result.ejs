@@ -134,6 +134,80 @@
           <div class="sw-overlay op-7"></div>
         </section>
 
+        <!-- Delivery Information Section -->
+        <section class="mt-5 mb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <% if (booking) { %>
+                <div class="card shadow-sm p-4 border-0">
+                  <h3 class="text-center mb-4">Delivery Information</h3>
+
+                  <div class="row">
+                    <!-- Shipper Information -->
+                    <div class="col-md-6 mb-4">
+                      <h5 class="fw-bold text-uppercase">
+                        Shipper Information
+                      </h5>
+                      <p>
+                        <strong>Name:</strong> <%= booking.shippersName || 'N/A'
+                        %>
+                      </p>
+                      <p>
+                        <strong>Address:</strong> <%= booking.shippersAddress ||
+                        'N/A' %>
+                      </p>
+                      <p>
+                        <strong>Phone:</strong> <%= booking.shippersPhoneNo ||
+                        'N/A' %>
+                      </p>
+                      <p>
+                        <strong>Email:</strong> <%= booking.shippersEmail ||
+                        'N/A' %>
+                      </p>
+                    </div>
+
+                    <!-- Receiver Information -->
+                    <div class="col-md-6 mb-4">
+                      <h5 class="fw-bold text-uppercase">
+                        Receiver Information
+                      </h5>
+                      <p>
+                        <strong>Name:</strong> <%= booking.receiversName ||
+                        'N/A' %>
+                      </p>
+                      <p>
+                        <strong>Address:</strong> <%= booking.deliveryAddress ||
+                        'N/A' %>
+                      </p>
+                      <p>
+                        <strong>Phone:</strong> <%= booking.receiversPhoneNo ||
+                        'N/A' %>
+                      </p>
+                      <p>
+                        <strong>Email:</strong> <%= booking.receiversEmail ||
+                        'N/A' %>
+                      </p>
+                    </div>
+                  </div>
+
+                  <% if (booking.additionalNote) { %>
+                  <div class="mt-2 mb-0">
+                    <h5 class="fw-bold text-uppercase mb-1">Additional Note</h5>
+                    <p class="fst-italic mb-0"><%= booking.additionalNote %></p>
+                  </div>
+                  <hr
+                    class="my-2"
+                    style="opacity: 0.15; margin-top: 6px; margin-bottom: 6px"
+                  />
+                  <% } %>
+                </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section>
           <div class="container">
             <div class="row justify-content-center">
@@ -166,6 +240,11 @@
                       <div class="d-icon"><i class="fa fa-check"></i></div>
                       <h4>Picked Up</h4>
                       Package collected from sender
+                    </div>
+                    <div class="d-date">
+                      <%= new Date(booking.pickupDate).toLocaleString('en-GB', {
+                      day: '2-digit', month: 'short', year: 'numeric', hour:
+                      '2-digit', minute: '2-digit', hour12: true }) %>
                     </div>
                   </div>
 
@@ -209,7 +288,12 @@
                       <h4>Delivery Attempted</h4>
                       Courier attempted delivery
                     </div>
-                    <div class="d-date">TBA</div>
+                    <div class="d-date">
+                      <%= new
+                      Date(booking.deliveryDeadline).toLocaleString('en-GB', {
+                      day: '2-digit', month: 'short', year: 'numeric', hour:
+                      '2-digit', minute: '2-digit', hour12: true }) %>
+                    </div>
                   </div>
 
                   <div
@@ -219,6 +303,12 @@
                       <div class="d-icon"><i class="fa fa-check"></i></div>
                       <h4>Delivered</h4>
                       Package successfully delivered
+                    </div>
+                    <div class="d-date">
+                      <%= new
+                      Date(booking.deliveryDeadline).toLocaleString('en-GB', {
+                      day: '2-digit', month: 'short', year: 'numeric', hour:
+                      '2-digit', minute: '2-digit', hour12: true }) %>
                     </div>
                   </div>
                 </div>
