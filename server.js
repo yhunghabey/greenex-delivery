@@ -71,6 +71,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const connectDB = require("./config/db");
+const session = require("express-session");
 
 // Initialize express app
 const app = express();
@@ -78,6 +79,15 @@ const PORT = 3000;
 
 // ✅ Connect to MongoDB
 connectDB();
+
+app.use(
+  session({
+    secret: "451fd284-8cd9-4ec3-ac1e-937fbbc3b634",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }, // set true if using HTTPS
+  })
+);
 
 // ✅ Set EJS as the view engine
 app.set("view engine", "ejs");

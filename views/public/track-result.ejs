@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LogiXpress - Transportation, Cargo & Logistics HTML Template</title>
+    <title>GreenEx Delivery - Transportation, Cargo & Logistics</title>
     <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16" />
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -21,6 +21,7 @@
     />
     <link href="css/plugins.css" rel="stylesheet" type="text/css" />
     <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="css/swiper-custom-1.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
     <!-- color scheme -->
@@ -33,6 +34,25 @@
   </head>
 
   <body>
+    <!-- 🌐 Language selector at top of page -->
+    <div
+      id="google_translate_element"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #f8f9fa;
+        padding: 8px 0;
+        text-align: right;
+        z-index: 9999;
+        border-bottom: 1px solid #ddd;
+      "
+    ></div>
+
+    <!-- Push down the rest of the content slightly -->
+    <div style="margin-top: 50px"></div>
+
     <div id="wrapper">
       <a href="#" id="back-to-top"></a>
 
@@ -52,7 +72,7 @@
                     <a href="/">
                       <img
                         class="logo-main"
-                        src="images/logo-white-2.webp"
+                        src="images/greenexdel.png"
                         alt=""
                       />
                       <img
@@ -87,7 +107,7 @@
                         >Why Choose Us</a
                       >
                     </li>
-                    <li><a class="menu-item" href="#section-faq">FAQ</a></li>
+                    <li><a class="menu-item" href="/contact">Contact</a></li>
                   </ul>
                   <!-- mainmenu end -->
                 </div>
@@ -324,20 +344,20 @@
         <div class="container">
           <div class="row g-4 justify-content-between">
             <div class="col-md-6">
-              <img src="images/logo-white.webp" class="w-170px mb-2" alt="" />
+              <img src="images/greenexdel.png" class="w-170px mb-2" alt="" />
               <div class="spacer-single"></div>
               <div class="row g-4">
                 <div class="col-md-6">
                   <div class="widget">
                     <h5>Services</h5>
                     <ul>
-                      <li><a href="service-single.html">Trucking</a></li>
-                      <li><a href="service-single.html">Air Freight</a></li>
-                      <li><a href="service-single.html">Ship Freight</a></li>
-                      <li><a href="service-single.html">Rail Freight</a></li>
-                      <li><a href="service-single.html">Warehousing</a></li>
+                      <li><a href="/service">Trucking</a></li>
+                      <li><a href="/service">Air Freight</a></li>
+                      <li><a href="/service">Ship Freight</a></li>
+                      <li><a href="/service">Rail Freight</a></li>
+                      <li><a href="/service">Warehousing</a></li>
                       <li>
-                        <a href="service-single.html">Customs Brokerage</a>
+                        <a href="/service">Customs Brokerage</a>
                       </li>
                     </ul>
                   </div>
@@ -348,11 +368,11 @@
                     <h5>Company</h5>
                     <ul>
                       <li><a href="/">Home</a></li>
-                      <li><a href="about-us">About Us</a></li>
-                      <li><a href="team.html">Our Team</a></li>
-                      <li><a href="careers.html">Careers</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="/about-us">About Us</a></li>
+                      <li><a href="/about-us">Our Team</a></li>
+                      <li><a href="/about-us">Careers</a></li>
+                      <li><a href="/">Blog</a></li>
+                      <li><a href="/contact">Contact</a></li>
                     </ul>
                   </div>
                 </div>
@@ -379,17 +399,17 @@
 
               <div class="widget">
                 <div class="op-5 fs-15">Email</div>
-                <h3>contact@logixpress.com</h3>
+                <h3>contact@greenexdelivery.com</h3>
 
                 <div class="spacer-20"></div>
 
                 <div class="op-5 fs-15">Phone</div>
-                <h3>+929 333 9296</h3>
+                <h3>+1 (458) 250-9783</h3>
 
                 <div class="spacer-20"></div>
 
                 <div class="op-5 fs-15">Office Location</div>
-                <h3>100 S Main St, New York, NY</h3>
+                <h3>3500 E. 17th Ave, Eugene, OR 97403</h3>
 
                 <div class="spacer-20"></div>
               </div>
@@ -400,7 +420,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12 text-center">
-                Copyright 2025 LogiXpress by Designesia
+                Copyright 2025 GreenEx Delivery
               </div>
             </div>
           </div>
@@ -409,68 +429,37 @@
       <!-- footer close -->
     </div>
 
-    <!-- overlay content begin -->
-    <div id="extra-wrap" class="text-light">
-      <div id="btn-close">
-        <span></span>
-        <span></span>
-      </div>
-
-      <div id="extra-content">
-        <img src="images/logo-white.webp" class="w-200px" alt="" />
-
-        <div class="spacer-30-line"></div>
-
-        <h5>Our Services</h5>
-        <ul class="ul-check">
-          <li>Trucking</li>
-          <li>Air Fright</li>
-          <li>Ship Freight</li>
-          <li>Rail Freight</li>
-          <li>Warehousing</li>
-          <li>Customs Brokerage</li>
-          <li>Last-Mile Delivery</li>
-          <li>Project Cargo</li>
-        </ul>
-
-        <div class="spacer-30-line"></div>
-
-        <h5>Contact Us</h5>
-        <div><i class="icofont-phone me-2 op-5"></i>+929 333 9296</div>
-        <div>
-          <i class="icofont-location-pin me-2 op-5"></i>100 S Main St, New York,
-          NY
-        </div>
-        <div>
-          <i class="icofont-envelope me-2 op-5"></i>contact@logixpress.com
-        </div>
-
-        <div class="spacer-30-line"></div>
-
-        <h5>About Us</h5>
-        <p>
-          We are a trusted logistics and cargo solutions provider committed to
-          delivering your goods safely, efficiently, and on time. With years of
-          experience in freight forwarding, warehousing, and international
-          shipping.
-        </p>
-
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- overlay content end -->
-
     <!-- Javascript Files
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/custom-swiper-1.js"></script>
+    <script src="js/custom-marquee.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en", // default language
+            includedLanguages: "en,fr,yo,es,de,ar,ja,zu,zh-CN,pt", // customize languages
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+      /* Optional: hide Google branding banner */
+      .goog-te-banner-frame.skiptranslate,
+      .goog-logo-link {
+        display: none !important;
+      }
+      body {
+        top: 0px !important;
+      }
+    </style>
   </body>
 </html>
