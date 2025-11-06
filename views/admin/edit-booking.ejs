@@ -4417,6 +4417,7 @@
           <label> Status </label>
           <select name="status" class="form-control">
             <option value="Order Placed" <%= booking.status === 'Order Placed' ? 'selected' : '' %>>Order Placed</option>
+            <option value="Pending" <%= booking.status === 'Pending' ? 'selected' : '' %>>Pending</option>
             <option value="Picked Up" <%= booking.status === 'Picked Up' ? 'selected' : '' %>>Pick Up</option>
             <option value="In Transit" <%= booking.status === 'In Transit' ? 'selected' : '' %>>In Transit</option>
             <option value="Arrived At Hub" <%= booking.status === 'Arrived At Hub' ? 'selected' : '' %>>Arrived At Hub</option>

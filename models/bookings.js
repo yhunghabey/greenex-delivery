@@ -50,7 +50,7 @@ const bookingsSchema = new mongoose.Schema({
     default: 1,
   },
   weight: {
-    type: Number,
+    type: String,
   },
   dimension: {
     type: String,
@@ -109,6 +109,7 @@ const bookingsSchema = new mongoose.Schema({
       "Order Placed",
       "Picked Up",
       "In Transit",
+      "Pending",
       "Arrived At Hub",
       "Out Of Delivery",
       "Delivery Attempt",
