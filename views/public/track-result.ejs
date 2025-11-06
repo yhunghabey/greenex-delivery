@@ -254,6 +254,16 @@
                   </div>
 
                   <div
+                    class="<%= bookingStatus === 'Pending' ? 'd-item active' : 'd-item' %>"
+                  >
+                    <div class="d-text">
+                      <div class="d-icon"><i class="fa fa-check"></i></div>
+                      <h4>Pending</h4>
+                      Package Been Held
+                    </div>
+                  </div>
+
+                  <div
                     class="<%= bookingStatus === 'Picked Up' ? 'd-item active' : 'd-item' %>"
                   >
                     <div class="d-text">
